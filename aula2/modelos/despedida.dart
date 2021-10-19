@@ -1,0 +1,3 @@
+mixin Despedida {
+  void seDespedir();
+}
