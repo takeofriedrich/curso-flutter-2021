@@ -9,12 +9,10 @@ main(List<String> args) async {
   } on Exception catch (e) {
     print(e);
   }
+  somaLista2(valores).then((x) => print(x)).catchError((e) => print(e));
+  somaLista2(valores).then((x) => print(x)).onError((e, stack) => print(e));
+
   print('codigo continuou executando');
-  try {
-    int resultado = await somaLista2(valores);
-  } catch (e) {
-    print(e);
-  }
 }
 
 int somaLista(List<int> inteiros) {
